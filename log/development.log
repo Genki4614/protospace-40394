@@ -20059,3 +20059,434 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 304 Not Modified in 49ms (ActiveRecord: 0.0ms | Allocations: 154)
 
 
+Started GET "/" for ::1 at 2024-06-19 23:33:58 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/index.html.erb:4
+  [1m[36mPrototype Load (0.8ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 3)[0m
+  ↳ app/views/prototypes/index.html.erb:13
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  Rendered collection of prototypes/_prototype.html.erb [3 times] (Duration: 171.3ms | Allocations: 27824)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 244.3ms | Allocations: 43456)
+  Rendered layout layouts/application.html.erb (Duration: 367.5ms | Allocations: 77321)
+Completed 200 OK in 424ms (Views: 359.2ms | ActiveRecord: 12.7ms | Allocations: 85483)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--138372e5c86d8341916a726b769e71d4fb8a2afa/11371380657549.jpg" for ::1 at 2024-06-19 23:33:58 +0900
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--103784f7a9d1c2912ebb1dfabc1026b0d43221dd/Rails%E3%81%AE%E5%87%A6%E7%90%86%E3%81%AE%E6%B5%81%E3%82%8C.png" for ::1 at 2024-06-19 23:33:58 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--103784f7a9d1c2912ebb1dfabc1026b0d43221dd", "filename"=>"Railsの処理の流れ"}
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: q3hmiud5o5rgmxb835i4nslfe937 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVE5vYldsMVpEVnZOWEpuYlhoaU9ETTFhVFJ1YzJ4bVpUa3pOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlCcGJteHBibVU3SUdacGJHVnVZVzFsUFNKU1lXbHNjeVV6UmlVelJpVXpSaVV6UmlVelJpVXpSaTV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoxSmhhV3h6SlVVekpUZ3hKVUZGSlVVMUpUZzNKVUUySlVVM0pUa3dKVGcySlVVekpUZ3hKVUZGSlVVMkpVSTFKVGd4SlVVekpUZ3lKVGhETG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU4Ljg4OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--278f609bb55d2a3103d4d634656e828b9cb24c1d/Rails%E3%81%AE%E5%87%A6%E7%90%86%E3%81%AE%E6%B5%81%E3%82%8C.png)[0m
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--138372e5c86d8341916a726b769e71d4fb8a2afa", "filename"=>"11371380657549"}
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVE5vYldsMVpEVnZOWEpuYlhoaU9ETTFhVFJ1YzJ4bVpUa3pOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlCcGJteHBibVU3SUdacGJHVnVZVzFsUFNKU1lXbHNjeVV6UmlVelJpVXpSaVV6UmlVelJpVXpSaTV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoxSmhhV3h6SlVVekpUZ3hKVUZGSlVVMUpUZzNKVUUySlVVM0pUa3dKVGcySlVVekpUZ3hKVUZGSlVVMkpVSTFKVGd4SlVVekpUZ3lKVGhETG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU4Ljg4OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--278f609bb55d2a3103d4d634656e828b9cb24c1d/Rails%E3%81%AE%E5%87%A6%E7%90%86%E3%81%AE%E6%B5%81%E3%82%8C.png
+Completed 302 Found in 50ms (ActiveRecord: 1.9ms | Allocations: 3707)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--17e1e2164f745096b7b243551dd022491e9ffbc4/HTML%E8%AA%B2%E9%A1%8C%EF%BC%93%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3%E3%82%AB%E3%83%B3%E3%83%95%E3%82%9A.png" for ::1 at 2024-06-19 23:33:58 +0900
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+[36m  Disk Storage (2.1ms) [0m[34mGenerated URL for file at key: xoeqhmhxnbfj27122v06u2x5k5dn (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU4Ljk0M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0e791ab747854cc02b8104182c518c16893663f3/11371380657549.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU4Ljk0M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0e791ab747854cc02b8104182c518c16893663f3/11371380657549.jpg
+Completed 302 Found in 32ms (ActiveRecord: 2.1ms | Allocations: 2673)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVE5vYldsMVpEVnZOWEpuYlhoaU9ETTFhVFJ1YzJ4bVpUa3pOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlCcGJteHBibVU3SUdacGJHVnVZVzFsUFNKU1lXbHNjeVV6UmlVelJpVXpSaVV6UmlVelJpVXpSaTV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoxSmhhV3h6SlVVekpUZ3hKVUZGSlVVMUpUZzNKVUUySlVVM0pUa3dKVGcySlVVekpUZ3hKVUZGSlVVMkpVSTFKVGd4SlVVekpUZ3lKVGhETG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU4Ljg4OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--278f609bb55d2a3103d4d634656e828b9cb24c1d/Rails%E3%81%AE%E5%87%A6%E7%90%86%E3%81%AE%E6%B5%81%E3%82%8C.png" for ::1 at 2024-06-19 23:33:58 +0900
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU4Ljk0M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0e791ab747854cc02b8104182c518c16893663f3/11371380657549.jpg" for ::1 at 2024-06-19 23:33:58 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--17e1e2164f745096b7b243551dd022491e9ffbc4", "filename"=>"HTML課題３デザインカンプ"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 6pckl7dtmn2rj67svauzznulfnir (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhObkJqYTJ3M1pIUnRiakp5YWpZM2MzWmhkWHA2Ym5Wc1ptNXBjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWRKcGJteHBibVU3SUdacGJHVnVZVzFsUFNKSVZFMU1KVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HTG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25TRlJOVENWRk9DVkJRU1ZDTWlWRk9TVkJNU1U0UXlWRlJpVkNReVU1TXlWRk15VTRNeVU0TmlWRk15VTRNaVU1T1NWRk15VTRNaVZDTlNWRk15VTRNaVU1T1NWRk15VTRNaVZCTkNWRk15VTRNeVZDTXlWRk15VTRNaVZCUWlWRk15VTRNeVZDTXlWRk15VTRNeVU1TlNWRk15VTRNaVU1UVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU5LjAyMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6fe8ec5cd527901aa4e3b75c3b34ce219e2aaf8b/HTML%E8%AA%B2%E9%A1%8C%EF%BC%93%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3%E3%82%AB%E3%83%B3%E3%83%95%E3%82%9A.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhObkJqYTJ3M1pIUnRiakp5YWpZM2MzWmhkWHA2Ym5Wc1ptNXBjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWRKcGJteHBibVU3SUdacGJHVnVZVzFsUFNKSVZFMU1KVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HTG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25TRlJOVENWRk9DVkJRU1ZDTWlWRk9TVkJNU1U0UXlWRlJpVkNReVU1TXlWRk15VTRNeVU0TmlWRk15VTRNaVU1T1NWRk15VTRNaVZDTlNWRk15VTRNaVU1T1NWRk15VTRNaVZCTkNWRk15VTRNeVZDTXlWRk15VTRNaVZCUWlWRk15VTRNeVZDTXlWRk15VTRNeVU1TlNWRk15VTRNaVU1UVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU5LjAyMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6fe8ec5cd527901aa4e3b75c3b34ce219e2aaf8b/HTML%E8%AA%B2%E9%A1%8C%EF%BC%93%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3%E3%82%AB%E3%83%B3%E3%83%95%E3%82%9A.png
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms | Allocations: 1827)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhObkJqYTJ3M1pIUnRiakp5YWpZM2MzWmhkWHA2Ym5Wc1ptNXBjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWRKcGJteHBibVU3SUdacGJHVnVZVzFsUFNKSVZFMU1KVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0pUTkdKVE5HTG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25TRlJOVENWRk9DVkJRU1ZDTWlWRk9TVkJNU1U0UXlWRlJpVkNReVU1TXlWRk15VTRNeVU0TmlWRk15VTRNaVU1T1NWRk15VTRNaVZDTlNWRk15VTRNaVU1T1NWRk15VTRNaVZCTkNWRk15VTRNeVZDTXlWRk15VTRNaVZCUWlWRk15VTRNeVZDTXlWRk15VTRNeVU1TlNWRk15VTRNaVU1UVM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDI0LTA2LTE5VDE0OjM4OjU5LjAyMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6fe8ec5cd527901aa4e3b75c3b34ce219e2aaf8b/HTML%E8%AA%B2%E9%A1%8C%EF%BC%93%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3%E3%82%AB%E3%83%B3%E3%83%95%E3%82%9A.png" for ::1 at 2024-06-19 23:33:59 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"11371380657549"}
+Completed 200 OK in 9ms (ActiveRecord: 0.0ms | Allocations: 348)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"HTML課題３デザインカンプ"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 172)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Railsの処理の流れ"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/prototypes/3" for ::1 at 2024-06-19 23:33:59 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPrototype Load (22.5ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 3[0m
+  ↳ app/views/prototypes/show.html.erb:50
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 45.8ms | Allocations: 7094)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 9012)
+Completed 200 OK in 128ms (Views: 52.4ms | ActiveRecord: 28.1ms | Allocations: 15403)
+
+
+Started GET "/prototypes/3" for ::1 at 2024-06-19 23:34:14 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 3[0m
+  ↳ app/views/prototypes/show.html.erb:50
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 87.4ms | Allocations: 4927)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | Allocations: 6842)
+Completed 200 OK in 113ms (Views: 100.2ms | ActiveRecord: 2.7ms | Allocations: 7808)
+
+
+Started POST "/prototypes/3/comments" for ::1 at 2024-06-19 23:34:17 +0900
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"content"=>""}, "commit"=>"送信する", "prototype_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:15:in `comment_params'
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mCACHE Prototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 16.7ms | Allocations: 5216)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 5304)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 7.1ms | Allocations: 14153)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    47:         <%# // ログインしているユーザーには上記を表示する %>
+    48:         <ul class="comments_lists">
+    49:           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+    50:              <% @comments.each do |comment| %>
+    51:               <li class="comments_list">
+    52:               <%= comment.content %> 
+    53:               <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
+  
+app/views/prototypes/show.html.erb:50
+app/controllers/comments_controller.rb:8:in `create'
+Started GET "/prototypes/3" for ::1 at 2024-06-19 23:39:01 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (8.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (29.6ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 96.0ms | Allocations: 5912)
+  Rendered layout layouts/application.html.erb (Duration: 96.5ms | Allocations: 6001)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 57.5ms | Allocations: 7530)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comments' for #<ActionView::Base:0x0000000000cfd0>):
+    47:         <%# // ログインしているユーザーには上記を表示する %>
+    48:         <ul class="comments_lists">
+    49:           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+    50:              <% comments.each do |comment| %>
+    51:               <li class="comments_list">
+    52:               <%= comment.content %> 
+    53:               <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
+  
+app/views/prototypes/show.html.erb:50
+Started GET "/prototypes/3" for ::1 at 2024-06-19 23:39:11 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mComment Load (3.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 3[0m
+  ↳ app/views/prototypes/show.html.erb:50
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 51.2ms | Allocations: 5576)
+  Rendered layout layouts/application.html.erb (Duration: 84.1ms | Allocations: 7973)
+Completed 200 OK in 116ms (Views: 87.7ms | ActiveRecord: 5.5ms | Allocations: 9505)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--138372e5c86d8341916a726b769e71d4fb8a2afa/11371380657549.jpg" for ::1 at 2024-06-19 23:39:11 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--138372e5c86d8341916a726b769e71d4fb8a2afa", "filename"=>"11371380657549"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: xoeqhmhxnbfj27122v06u2x5k5dn (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjQ0OjExLjk1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a828b9c9da59400763ce4482d5bd96d8913d566a/11371380657549.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjQ0OjExLjk1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a828b9c9da59400763ce4482d5bd96d8913d566a/11371380657549.jpg
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms | Allocations: 1437)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjQ0OjExLjk1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a828b9c9da59400763ce4482d5bd96d8913d566a/11371380657549.jpg" for ::1 at 2024-06-19 23:39:11 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"11371380657549"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started POST "/prototypes/3/comments" for ::1 at 2024-06-19 23:39:14 +0900
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"content"=>""}, "commit"=>"送信する", "prototype_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:15:in `comment_params'
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mCACHE Prototype Load (0.0ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 27.8ms | Allocations: 4650)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 4738)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 3.4ms | Allocations: 10601)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    47:         <%# // ログインしているユーザーには上記を表示する %>
+    48:         <ul class="comments_lists">
+    49:           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+    50:              <% @comments.each do |comment| %>
+    51:               <li class="comments_list">
+    52:               <%= comment.content %> 
+    53:               <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
+  
+app/views/prototypes/show.html.erb:50
+app/controllers/comments_controller.rb:8:in `create'
+Started GET "/prototypes/3" for ::1 at 2024-06-19 23:45:37 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 3[0m
+  ↳ app/views/prototypes/show.html.erb:50
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 28.3ms | Allocations: 5596)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 7990)
+Completed 200 OK in 64ms (Views: 41.9ms | ActiveRecord: 6.2ms | Allocations: 9638)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--138372e5c86d8341916a726b769e71d4fb8a2afa/11371380657549.jpg" for ::1 at 2024-06-19 23:45:38 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--138372e5c86d8341916a726b769e71d4fb8a2afa", "filename"=>"11371380657549"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: xoeqhmhxnbfj27122v06u2x5k5dn (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjUwOjM4LjE5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--352290c66f9a9ad1e11e2360b2ab3f3de69783ea/11371380657549.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjUwOjM4LjE5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--352290c66f9a9ad1e11e2360b2ab3f3de69783ea/11371380657549.jpg
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms | Allocations: 1439)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjUwOjM4LjE5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--352290c66f9a9ad1e11e2360b2ab3f3de69783ea/11371380657549.jpg" for ::1 at 2024-06-19 23:45:38 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"11371380657549"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started POST "/prototypes/3/comments" for ::1 at 2024-06-19 23:45:39 +0900
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"content"=>""}, "commit"=>"送信する", "prototype_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:15:in `comment_params'
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mCACHE Prototype Load (0.0ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (155.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (5.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 175.4ms | Allocations: 4649)
+  Rendered layout layouts/application.html.erb (Duration: 178.1ms | Allocations: 4737)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 164.6ms | Allocations: 10599)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    47:         <%# // ログインしているユーザーには上記を表示する %>
+    48:         <ul class="comments_lists">
+    49:           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+    50:              <% @comments.each do |comment| %>
+    51:               <li class="comments_list">
+    52:               <%= comment.content %> 
+    53:               <%= link_to "（#{comment.user.name}）", user_path(comment.user.id), class: :comment_user %>
+  
+app/views/prototypes/show.html.erb:50
+app/controllers/comments_controller.rb:8:in `create'
+Started GET "/prototypes/3" for ::1 at 2024-06-19 23:46:46 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 3[0m
+  ↳ app/views/prototypes/show.html.erb:50
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 140.2ms | Allocations: 21519)
+  Rendered layout layouts/application.html.erb (Duration: 185.7ms | Allocations: 36816)
+Completed 200 OK in 223ms (Views: 173.6ms | ActiveRecord: 17.8ms | Allocations: 46858)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlRzlsY1dodGFIaHVZbVpxTWpjeE1qSjJNRFoxTW5nMWF6VmtiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFeE16Y3hNemd3TmpVM05UUTVMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1URXpOekV6T0RBMk5UYzFORGt1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDI0LTA2LTE5VDE0OjUwOjM4LjE5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--352290c66f9a9ad1e11e2360b2ab3f3de69783ea/11371380657549.jpg" for ::1 at 2024-06-19 23:46:47 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"11371380657549"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started POST "/prototypes/3/comments" for ::1 at 2024-06-19 23:46:49 +0900
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"content"=>""}, "commit"=>"送信する", "prototype_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:17:in `comment_params'
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mCACHE Prototype Load (0.0ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 3[0m
+  ↳ app/views/prototypes/show.html.erb:50
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 30.5ms | Allocations: 5234)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 7204)
+Completed 200 OK in 75ms (Views: 39.7ms | ActiveRecord: 5.4ms | Allocations: 15860)
+
+
+Started POST "/prototypes/3/comments" for ::1 at 2024-06-19 23:46:50 +0900
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"content"=>""}, "commit"=>"送信する", "prototype_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:17:in `comment_params'
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mCACHE Prototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:17
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 3[0m
+  ↳ app/views/prototypes/show.html.erb:50
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 32.9ms | Allocations: 4352)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 6244)
+Completed 200 OK in 82ms (Views: 35.4ms | ActiveRecord: 18.2ms | Allocations: 11824)
+
+
